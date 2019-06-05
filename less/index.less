@@ -60,6 +60,7 @@ html, body {
 
  /* Variables */
 @anchor-color: gray;
+@full-width: 100%;
 
  /* Mixins */
 .flexed {
@@ -72,11 +73,33 @@ html, body {
 
 
 nav {
-	width: 100%;
-	height: 75px;
+	width: @full-width;
+	height: 175px;
 
 	a {
 		color: @anchor-color;
 		margin: auto;
 	}
+}
+
+.intro-section {
+	height: 100px;
+}
+
+.skills-section {
+	height: 200px;
+}
+
+.work-history-section {
+	height: 200px;
+}
+
+.contact-section {
+	height: 200px;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+
 }
