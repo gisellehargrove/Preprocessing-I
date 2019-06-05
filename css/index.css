@@ -134,6 +134,9 @@ html,
 body {
   height: 100%;
 }
+body {
+  margin: 50px;
+}
 /* Variables */
 /* Mixins */
 .flexed {
@@ -156,6 +159,14 @@ h1 {
 .intro-section {
   height: 500px;
   background-color: lightgray;
+}
+.intro-section img {
+  height: 50%;
+  margin: 30px;
+}
+.intro-section h1 {
+  margin: 30px 20px;
+  padding: 20px;
 }
 .skills-section {
   height: 200px;
