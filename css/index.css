@@ -141,6 +141,7 @@ body {
 /* Mixins */
 .flexed {
   display: flex;
+  justify-content: flex-end;
 }
 .flex-grow {
   flex-grow: 1;
