@@ -59,6 +59,24 @@ html, body {
 
 
  /* Variables */
-
+@anchor-color: gray;
 
  /* Mixins */
+.flexed {
+	display: flex;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+
+nav {
+	width: 100%;
+	height: 75px;
+
+	a {
+		color: @anchor-color;
+		margin: auto;
+	}
+}
