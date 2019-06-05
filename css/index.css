@@ -185,16 +185,6 @@ form label {
   border: solid 3px white;
   background: rgba(112, 128, 144, 0.2);
 }
-.Rtable-cell > h1,
-.Rtable-cell > h2,
-.Rtable-cell > h3,
-.Rtable-cell > h4,
-.Rtable-cell > h5,
-.Rtable-cell > h6 {
-  margin: 0;
-}
-/* Table column sizing
-================================== */
 .Rtable--2cols > .Rtable-cell {
   width: 50%;
 }
