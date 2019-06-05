@@ -150,8 +150,12 @@ nav a {
   color: gray;
   margin: auto;
 }
+h1 {
+  font-size: 50px;
+}
 .intro-section {
-  height: 100px;
+  height: 500px;
+  background-color: lightgray;
 }
 .skills-section {
   height: 200px;
