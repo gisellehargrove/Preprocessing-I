@@ -162,12 +162,23 @@ h1 {
   background-color: lightgray;
 }
 .intro-section img {
-  height: 50%;
+  height: 150px;
   margin: 30px;
 }
 .intro-section h1 {
   margin: 30px 20px;
   padding: 20px;
+}
+.intro-section .intro-container {
+  display: flex;
+}
+.intro-section .intro-container .intro-img {
+  flex-grow: 1;
+}
+.intro-section .intro-container .intro-paragraph {
+  flex-grow: 1;
+  width: 50%;
+  padding: 25px 50px;
 }
 .skills-section {
   height: 200px;
