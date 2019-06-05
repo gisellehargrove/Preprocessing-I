@@ -175,10 +175,17 @@ textarea {
 
 .message,
 .check,
-.submit {margin-top: 1em;}
+.submit {
+	margin-top: 1em;
+}
+
 .message textarea,
-.submit input {width: 100%;}
-å.message textarea {height: 8em;}
+.submit input {
+	width: 100%;
+}
+.message textarea {
+	height: 8em;
+}
 .check input:before {
   content: "";
   position: absolute;
@@ -190,23 +197,7 @@ textarea {
   border-radius: @radius;
   transition: all .35s ease;
 }
-.radio input:before {
-  border-radius: 50%;
-}
-.radio input:checked:before {
-  top: -.1em;
-  left: -.1em;
-  width: .5em;
-  height: .5em;
-  border: .35em solid #e9e9e9;
-  background: #1abc9c;
-}
-.check input:checked:before {
-  content: "\f00c";
-  font-family: 'fontAwesome';
-  color: #1abc9c;
-}
-.check input:before {left:-.1px;}
+
 .submit input {
   //display: block;
   //margin: auto;
