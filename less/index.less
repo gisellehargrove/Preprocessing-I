@@ -1,59 +1,206 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
-
 html, body {
     height: 100%;
 }
 
+body {
+	margin: 50px;
+}
+
+
+ /* Variables */
+@anchor-color: gray;
+@full-width: 100%;
+@radius: 4px;
+@bw: 3px;  // border width
+
+ /* Mixins */
+.flexed {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+
+nav {
+	width: @full-width;
+	height: 175px;
+
+	a {
+		color: @anchor-color;
+		margin: auto;
+	}
+}
+
+h1 {
+	font-size: 50px;
+}
+
+.intro-section {
+	height: 500px;
+	background-color: lightgray;
+
+	img {
+		height: 150px;
+		margin: 30px;
+	}
+
+	h1 {
+		margin: 30px 20px;
+		padding: 20px;
+	}
+
+	.intro-header {
+
+	}
+
+	.intro-container {
+		display: flex;
+
+		.intro-img {
+			flex-grow: 1;
+		}
+
+		.intro-paragraph {
+			flex-grow: 1;
+			width: 50%;
+			padding: 25px 50px;
+		}
+	}
+
+}
+
+.skills-section {
+	height: 200px;
+}
+
+.work-history-section {
+	height: 200px;
+}
+
+.contact-section {
+	height: 200px;
+}
+
+table {
+	width: 100px;
+}
+
+form label {
+	font-size: .9em;
+}
+
+/* Work History Table */
+
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid @bw white;
+  background: fade(slategrey,20%);
+}
+
+.Rtable--2cols > .Rtable-cell  {
+	width: 50%;
+}
+.Rtable--3cols > .Rtable-cell  {
+	width: 33.33%;
+}
+.Rtable--4cols > .Rtable-cell  {
+	width: 25%;
+}
+.Rtable--5cols > .Rtable-cell  {
+	width: 20%;
+}
+.Rtable--6cols > .Rtable-cell  {
+	width: 16.6%;
+}
+
+
+
+
+/* Form */
+form {
+  margin: 7% auto;
+  padding: 1em;
+  width: 320px;
+  color: #aaa;
+  border: .1em solid #ddd;
+  border-radius: @radius;
+}
+.name {width: 100%;}
+.name input,
+.submit input,
+select,
+textarea {
+  width: 47%;
+  height: 3em;
+  text-indent: .5em;
+  border: .1em solid #ddd;
+  border-radius: @radius;
+  outline-color: #1abc9c;
+}
+.name input[name="surname"] {float: right;}
+.name input[type="mail"] {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.message,
+.check,
+.submit {
+	margin-top: 1em;
+}
+
+.message textarea,
+.submit input {
+	width: 100%;
+}
+.message textarea {
+	height: 8em;
+}
+.check input:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background: #e9e9e9;
+  border-radius: @radius;
+  transition: all .35s ease;
+}
+
+.submit input {
+  background: #1abc9c;
+  color: #fff;
+  border: 0;
+  border-bottom: @radius solid darken(#1abc9c, 7%);
+  font-size: 1em;
+  font-weight: bold;
+  &:focus,
+  &:hover {
+    background: #16a085;
+    border-bottom-color: darken(#16a085, 7%);
+  }
+  &:active {
+    background: #1bc2a2;
+    border-bottom-color: darken(#1bc2a2, 7%);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+
+}
